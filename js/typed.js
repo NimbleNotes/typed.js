@@ -37,13 +37,14 @@
 
         // attribute to type into
         this.isInput = this.el.is('input');
+        this.isTextArea = this.el.is('textarea') ;
         this.attr = this.options.attr;
 
         // show cursor
-        this.showCursor = this.isInput ? false : this.options.showCursor;
+        this.showCursor = this.isInput || this.isTextArea ? false : this.options.showCursor;
 
         // text content of element
-        this.elContent = this.attr ? this.el.attr(this.attr) : this.el.text()
+        this.elContent = this.attr ? this.el.attr(this.attr) : this.el.text();
 
         // html or plain text
         this.contentType = this.options.contentType;
@@ -231,6 +232,11 @@
                         } else {
                             if (self.isInput) {
                                 self.el.val(nextString);
+                            } else if (self.isTextArea) {
+                                self.el.val(nextString);
+                                // Trigger resize event if needed (see nimblenotes:jquery-autosize) package
+                                // for event handler
+                                self.el.change();
                             } else if (self.contentType === 'html') {
                                 self.el.html(nextString);
                             } else {
@@ -299,6 +305,11 @@
                 } else {
                     if (self.isInput) {
                         self.el.val(nextString);
+                    } else if (self.isTextArea) {
+                        self.el.val(nextString);
+                        // Trigger resize event if needed (see nimblenotes:jquery-autosize) package
+                        // for event handler
+                        self.el.change();
                     } else if (self.contentType === 'html') {
                         self.el.html(nextString);
                     } else {
