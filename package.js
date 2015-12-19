@@ -1,7 +1,7 @@
 Package.describe({
     name: 'nimblenotes:typed.js',
-    version: '1.1.1',
-    summary: 'Sideshow interactive tour',
+    version: '0.0.1',
+    summary: 'Typed.js v1.1.1',
     git: 'https://github.com/NimbleNotes/nimblenotes-packages',
     documentation: 'README.md'
 });
@@ -11,7 +11,7 @@ Package.onUse(function (api) {
 
     api.use([
         'jquery',
-        'nimblenotes:jquery-autosize@1.17.8'
+        'nimblenotes:jquery-autosize@0.0.1'
     ], 'client');
     api.addFiles([
       'js/typed.js'

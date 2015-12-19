@@ -236,7 +236,7 @@
                                 self.el.val(nextString);
                                 // Trigger resize event if needed (see nimblenotes:jquery-autosize) package
                                 // for event handler
-                                self.el.change();
+                                self.el.trigger('autotype');
                             } else if (self.contentType === 'html') {
                                 self.el.html(nextString);
                             } else {
@@ -309,7 +309,7 @@
                         self.el.val(nextString);
                         // Trigger resize event if needed (see nimblenotes:jquery-autosize) package
                         // for event handler
-                        self.el.change();
+                        self.el.trigger('autotype');
                     } else if (self.contentType === 'html') {
                         self.el.html(nextString);
                     } else {
