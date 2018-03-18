@@ -11,7 +11,6 @@ Package.onUse(function (api) {
 
     api.use([
         'jquery',
-        'nimblenotes:jquery-autosize@0.0.1'
     ], 'client');
     api.addFiles([
       'js/typed.js'
