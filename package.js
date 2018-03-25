@@ -1,6 +1,6 @@
 Package.describe({
     name: 'nimblenotes:typed.js',
-    version: '0.0.1',
+    version: '0.0.2',
     summary: 'Typed.js v1.1.1',
     git: 'https://github.com/NimbleNotes/nimblenotes-packages',
     documentation: 'README.md'
